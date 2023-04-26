@@ -57,12 +57,12 @@ const Clock: React.FC = () => {
     async function fetchData() {
       await axios
         .get('https://worldtimeapi.org/api/timezone/Europe/Chisinau')
-        .then((res: any) => {
+        .then((res) => {
           setData(res.data)
           setLoading(false)
           setError(false)
         })
-        .catch((err: any) => {
+        .catch((err) => {
           setError(true)
           setLoading(false)
         })
